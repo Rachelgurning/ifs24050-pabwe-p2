@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <!-- Navigasi Utama -->
   <header class="navbar">
     <div class="container">
       <div class="nav-container">
@@ -27,6 +28,7 @@
   </header>
 
   <main>
+    <!-- Section Hero -->
     <section class="hero">
       <div class="container">
         <span class="badge-saas">Powered by Toba Ecosystem Engine</span>
@@ -40,6 +42,7 @@
       </div>
     </section>
 
+    <!-- Section Layanan -->
     <section class="section" id="layanan">
       <div class="container">
         <div class="section-title">
@@ -68,17 +71,19 @@
       </div>
     </section>
 
-    <section class="section" id="tentang" style="background: #ffffff;">
+    <!-- Section Tentang -->
+    <section class="section bg-white-surface" id="tentang">
       <div class="container">
         <div class="section-title">
           <h2>Mengapa Memilih TOBAKU AI?</h2>
         </div>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto; color: var(--text-muted);">
+        <p class="about-text">
           TOBAKU AI menggabungkan teknologi kecerdasan buatan mutakhir dengan pemahaman mendalam tentang ekosistem lokal kawasan Danau Toba. Kami berfokus memberikan solusi nyata yang mudah diakses oleh pelaku UMKM, industri pariwisata, dan lembaga publik.
         </p>
       </div>
     </section>
 
+    <!-- Section Kontak -->
     <section class="section" id="kontak">
       <div class="container">
         <div class="section-title">
@@ -98,15 +103,42 @@
             <label for="pesan">Pesan</label>
             <textarea id="pesan" class="form-control" rows="4" placeholder="Tuliskan kebutuhan AI Anda..." required></textarea>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%;">Kirim Pesan</button>
+          <button type="submit" class="btn-primary btn-full">Kirim Pesan</button>
         </form>
       </div>
     </section>
   </main>
 
+  <!-- Footer dengan Quick Links -->
   <footer>
     <div class="container">
-      <p>&copy; 2026 TOBAKU AI Platform. Inspired by Lake Toba Heritage & Modern Tech.</p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">TOBAKU<span>.AI</span></a>
+          <p>Platform solusi kecerdasan buatan terdepan untuk mendorong akselerasi digital dan ekonomi di kawasan Danau Toba.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigasi Cepat</h4>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="#layanan">Layanan AI</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="blog.html">Blog Artikel</a></li>
+            <li><a href="cv.html">CV Pengembang</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="#layanan">Otomatisasi UMKM</a></li>
+            <li><a href="#layanan">Analisis Wisata</a></li>
+            <li><a href="#layanan">Solusi LLM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TOBAKU AI Platform. Inspired by Lake Toba Heritage & Modern Tech.</p>
+      </div>
     </div>
   </footer>
 

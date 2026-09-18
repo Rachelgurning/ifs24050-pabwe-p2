@@ -26,11 +26,17 @@
       border-radius: 16px;
       transition: all 0.2s ease;
       background: #ffffff;
+      overflow: hidden;
     }
     .card-saas:hover {
       border-color: var(--toba-red);
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(153, 27, 27, 0.08);
+    }
+    .card-thumb {
+      height: 180px;
+      object-fit: cover;
+      width: 100%;
     }
     .text-toba-blue { color: var(--toba-blue); }
     .text-toba-red { color: var(--toba-red); }
@@ -51,6 +57,7 @@
 </head>
 <body>
 
+  <!-- Navigasi Header Bootstrap -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg nav-saas py-3">
       <div class="container">
@@ -64,12 +71,14 @@
     </nav>
   </header>
 
+  <!-- Konten Utama Blog -->
   <main class="container py-5">
     <div class="mb-4">
       <h1 class="fw-bold text-toba-blue">Blog & Wawasan AI</h1>
       <p class="text-custom-muted">Artikel teknis dan penerapan Artificial Intelligence untuk kawasan Toba.</p>
     </div>
 
+    <!-- Filter dan Pencarian -->
     <div class="row g-3 mb-5 align-items-center">
       <div class="col-md-6">
         <input type="text" id="searchInput" class="form-control rounded-3" placeholder="Cari artikel (misal: UMKM, Generative AI)..." onkeyup="filterArticles()">
@@ -82,65 +91,82 @@
       </div>
     </div>
 
+    <!-- Grid Kartu Blog -->
     <div class="row g-4" id="articleGrid">
       
+      <!-- Card Artikel 1 -->
       <div class="col-md-6 col-lg-3 article-item" data-category="UMKM">
-        <article class="card h-100 card-saas p-3">
-          <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>UMKM</span>
-          <h2 class="fw-bold fs-6">
-            <a href="blog-detail.html?id=omset-umkm" class="text-decoration-none text-toba-blue">Otomatisasi Harga & Stok UMKM Toba</a>
-          </h2>
-          <p class="text-custom-muted small flex-grow-1 mt-2">Bagaimana algoritma TOBAKU AI menentukan estimasi harga rasional bagi perajin lokal.</p>
-          <div class="pt-3 border-top small text-dark d-flex justify-content-between">
-            <span><i class="bi bi-person me-1"></i>Rachel</span>
-            <span><i class="bi bi-calendar me-1"></i>18 Sep 2026</span>
+        <article class="card h-100 card-saas">
+          <img src="assets/img/blog-umkm.jpg" alt="Otomatisasi UMKM Toba" class="card-thumb">
+          <div class="p-3 d-flex flex-column flex-grow-1">
+            <span class="badge badge-toba align-self-start mb-2"><i class="bi bi-tag-fill me-1"></i>UMKM</span>
+            <h2 class="fw-bold fs-6">
+              <a href="blog-detail.html?id=omset-umkm" class="text-decoration-none text-toba-blue">Otomatisasi Harga & Stok UMKM Toba</a>
+            </h2>
+            <p class="text-custom-muted small flex-grow-1 mt-2">Bagaimana algoritma TOBAKU AI menentukan estimasi harga rasional bagi perajin lokal.</p>
+            <div class="pt-3 border-top small text-dark d-flex justify-content-between">
+              <span><i class="bi bi-person me-1"></i>Rachel</span>
+              <span><i class="bi bi-calendar me-1"></i>18 Sep 2026</span>
+            </div>
+            <a href="blog-detail.html?id=omset-umkm" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
-          <a href="blog-detail.html?id=omset-umkm" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
         </article>
       </div>
 
+      <!-- Card Artikel 2 -->
       <div class="col-md-6 col-lg-3 article-item" data-category="Pariwisata">
-        <article class="card h-100 card-saas p-3">
-          <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>Pariwisata</span>
-          <h2 class="fw-bold fs-6">
-            <a href="blog-detail.html?id=prediksi-wisata" class="text-decoration-none text-toba-blue">Prediksi Tren Wisatawan Danau Toba</a>
-          </h2>
-          <p class="text-custom-muted small flex-grow-1 mt-2">Pemetaan pola kunjungan wisatawan berbasis AI untuk mengoptimalkan sektor penginapan.</p>
-          <div class="pt-3 border-top small text-dark d-flex justify-content-between">
-            <span><i class="bi bi-person me-1"></i>Tim AI</span>
-            <span><i class="bi bi-calendar me-1"></i>15 Sep 2026</span>
+        <article class="card h-100 card-saas">
+          <img src="assets/img/blog-pariwisata.jpg" alt="Prediksi Wisata Danau Toba" class="card-thumb">
+          <div class="p-3 d-flex flex-column flex-grow-1">
+            <span class="badge badge-toba align-self-start mb-2"><i class="bi bi-tag-fill me-1"></i>Pariwisata</span>
+            <h2 class="fw-bold fs-6">
+              <a href="blog-detail.html?id=prediksi-wisata" class="text-decoration-none text-toba-blue">Prediksi Tren Wisatawan Danau Toba</a>
+            </h2>
+            <p class="text-custom-muted small flex-grow-1 mt-2">Pemetaan pola kunjungan wisatawan berbasis AI untuk mengoptimalkan sektor penginapan.</p>
+            <div class="pt-3 border-top small text-dark d-flex justify-content-between">
+              <span><i class="bi bi-person me-1"></i>Tim AI</span>
+              <span><i class="bi bi-calendar me-1"></i>15 Sep 2026</span>
+            </div>
+            <a href="blog-detail.html?id=prediksi-wisata" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
-          <a href="blog-detail.html?id=prediksi-wisata" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
         </article>
       </div>
 
+      <!-- Card Artikel 3 -->
       <div class="col-md-6 col-lg-3 article-item" data-category="LLM">
-        <article class="card h-100 card-saas p-3">
-          <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>LLM</span>
-          <h2 class="fw-bold fs-6">
-            <a href="blog-detail.html?id=llm-dokumen" class="text-decoration-none text-toba-blue">Ekstraksi Dokumen Cerdas Berbasis LLM</a>
-          </h2>
-          <p class="text-custom-muted small flex-grow-1 mt-2">Pemanfaatan model bahasa besar untuk mempercepat otomatisasi data dan informasi publik.</p>
-          <div class="pt-3 border-top small text-dark d-flex justify-content-between">
-            <span><i class="bi bi-person me-1"></i>Rachel</span>
-            <span><i class="bi bi-calendar me-1"></i>10 Sep 2026</span>
+        <article class="card h-100 card-saas">
+          <img src="assets/img/blog-llm.jpg" alt="Ekstraksi Dokumen LLM" class="card-thumb">
+          <div class="p-3 d-flex flex-column flex-grow-1">
+            <span class="badge badge-toba align-self-start mb-2"><i class="bi bi-tag-fill me-1"></i>LLM</span>
+            <h2 class="fw-bold fs-6">
+              <a href="blog-detail.html?id=llm-dokumen" class="text-decoration-none text-toba-blue">Ekstraksi Dokumen Cerdas Berbasis LLM</a>
+            </h2>
+            <p class="text-custom-muted small flex-grow-1 mt-2">Pemanfaatan model bahasa besar untuk mempercepat otomatisasi data dan informasi publik.</p>
+            <div class="pt-3 border-top small text-dark d-flex justify-content-between">
+              <span><i class="bi bi-person me-1"></i>Rachel</span>
+              <span><i class="bi bi-calendar me-1"></i>10 Sep 2026</span>
+            </div>
+            <a href="blog-detail.html?id=llm-dokumen" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
-          <a href="blog-detail.html?id=llm-dokumen" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
         </article>
       </div>
 
+      <!-- Card Artikel 4 -->
       <div class="col-md-6 col-lg-3 article-item" data-category="LLM">
-        <article class="card h-100 card-saas p-3">
-          <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>LLM</span>
-          <h2 class="fw-bold fs-6">
-            <a href="blog-detail.html?id=etika-ai" class="text-decoration-none text-toba-blue">Etika & Privasi Data dalam AI Lokal</a>
-          </h2>
-          <p class="text-custom-muted small flex-grow-1 mt-2">Pentingnya menjaga keamanan data budaya dan identitas masyarakat lokal dalam era AI.</p>
-          <div class="pt-3 border-top small text-dark d-flex justify-content-between">
-            <span><i class="bi bi-person me-1"></i>Tim AI</span>
-            <span><i class="bi bi-calendar me-1"></i>05 Sep 2026</span>
+        <article class="card h-100 card-saas">
+          <img src="assets/img/blog-etika.jpg" alt="Etika AI Lokal" class="card-thumb">
+          <div class="p-3 d-flex flex-column flex-grow-1">
+            <span class="badge badge-toba align-self-start mb-2"><i class="bi bi-tag-fill me-1"></i>LLM</span>
+            <h2 class="fw-bold fs-6">
+              <a href="blog-detail.html?id=etika-ai" class="text-decoration-none text-toba-blue">Etika & Privasi Data dalam AI Lokal</a>
+            </h2>
+            <p class="text-custom-muted small flex-grow-1 mt-2">Pentingnya menjaga keamanan data budaya dan identitas masyarakat lokal dalam era AI.</p>
+            <div class="pt-3 border-top small text-dark d-flex justify-content-between">
+              <span><i class="bi bi-person me-1"></i>Tim AI</span>
+              <span><i class="bi bi-calendar me-1"></i>05 Sep 2026</span>
+            </div>
+            <a href="blog-detail.html?id=etika-ai" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
-          <a href="blog-detail.html?id=etika-ai" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
         </article>
       </div>
 
