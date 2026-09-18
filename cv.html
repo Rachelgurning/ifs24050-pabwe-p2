@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Rachel N. Gurning</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#f8f6f0] text-stone-800 font-sans antialiased">
+
+  <!-- INTEGRASI NAVIGASI -->
+  <nav class="bg-white/80 backdrop-blur-md border-b border-stone-200 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="font-extrabold text-xl text-[#0f2c59]">TOBAKU<span class="text-[#991b1b]">.AI</span></a>
+      <div class="flex gap-6 font-semibold text-sm">
+        <a href="index.html" class="text-stone-500 hover:text-stone-900 transition">Beranda</a>
+        <a href="blog.html" class="text-stone-500 hover:text-stone-900 transition">Blog</a>
+        <a href="cv.html" class="text-[#991b1b] border-b-2 border-[#991b1b] pb-1">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-12 gap-8">
+    
+    <!-- HEADER PROFIL & KONTAK -->
+    <aside class="md:col-span-4 space-y-6">
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 text-center shadow-sm">
+        <img src="assets/img/profile.png" alt="Foto Profil Rachel N. Gurning" 
+          class="w-24 h-24 rounded-full object-cover mx-auto mb-4 border-2 border-red-200 shadow-sm">
+>
+        <h1 class="font-bold text-lg text-[#0f2c59]"></h1>Rachel N. Gurning</h1>
+        <p class="text-[#991b1b] font-semibold text-xs mt-1">S1 Informatika Student & Frontend Dev</p>
+
+        <div class="mt-6 pt-6 border-t border-stone-100 text-left text-xs space-y-3 text-stone-600">
+          <div>📍 Porsea, Toba, Sumatera Utara</div>
+          <div>✉️ rachelgurning0@gmail.com</div>
+          <div>💻 <a href="https://github.com" target="_blank" class="text-sky-600 hover:underline">github.com/rachelng</a></div>
+        </div>
+      </div>
+
+      <!-- KEAHLIAN / SKILLS (CHIP BADGE) -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm">
+        <h2 class="font-bold text-sm mb-3 text-[#0f2c59]">Technical Skills</h2>
+        <div class="flex flex-wrap gap-1.5 text-xs">
+          <span class="bg-stone-100 text-stone-700 px-2.5 py-1 rounded-md font-medium">HTML/CSS</span>
+          <span class="bg-stone-100 text-stone-700 px-2.5 py-1 rounded-md font-medium">Tailwind CSS 4</span>
+          <span class="bg-stone-100 text-stone-700 px-2.5 py-1 rounded-md font-medium">Bootstrap 5</span>
+          <span class="bg-stone-100 text-stone-700 px-2.5 py-1 rounded-md font-medium">Java</span>
+          <span class="bg-stone-100 text-stone-700 px-2.5 py-1 rounded-md font-medium">C System</span>
+          <span class="bg-stone-100 text-stone-700 px-2.5 py-1 rounded-md font-semibold">UI/UX Design</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="md:col-span-8 space-y-6">
+      
+      <!-- ABOUT / RINGKASAN -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm">
+        <h2 class="font-bold text-base mb-2 text-[#0f2c59]">Ringkasan Diri</h2>
+        <p class="text-stone-600 text-sm leading-relaxed">
+          Mahasiswa S1 Informatika di Institut Teknologi Del yang berfokus pada pengembangan antarmuka web modern, perancangan sistem berbasis AI, serta desain UI/UX intuitif untuk memberdayakan potensi lokal Toba.
+        </p>
+      </div>
+
+      <!-- PENDIDIKAN -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm">
+        <h2 class="font-bold text-base mb-4 text-[#0f2c59]">Pendidikan</h2>
+        <div class="border-l-2 border-[#991b1b] pl-4 space-y-1">
+          <h3 class="font-bold text-sm text-stone-800">S1 Informatika - Institut Teknologi Del</h3>
+          <p class="text-xs text-[#991b1b] font-semibold">2024 - Sekarang</p>
+          <h3 class="font-bold text-sm text-stone-800">SMA Negeri 1 Laguboti</h3>
+          <p class="text-xs text-[#991b1b] font-semibold">2021 - 2024</p>
+          <h3 class="font-bold text-sm text-stone-800">SMP Swasta Budhi Dharma Balige</h3>
+          <p class="text-xs text-[#991b1b] font-semibold">2018 - 2021</p>
+        </div>
+      </div>
+
+      <!-- PENGALAMAN -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm">
+        <h2 class="font-bold text-base mb-4 text-[#0f2c59]">Pengalaman</h2>
+        <div class="space-y-4 text-xs">
+          <div class="p-3 bg-red-50/40 rounded-lg border border-red-100">
+            <h3 class="font-bold text-stone-800 text-sm">Panitia Bebras Challenge 2025</h3>
+            <p class="text-stone-500 mt-1">Mengelola alur kompetisi dan logistik teknis penilaian computational thinking.</p>
+          </div>
+          <div class="p-3 bg-red-50/40 rounded-lg border border-red-100">
+            <h3 class="font-bold text-stone-800 text-sm">Pengembangan Platform TobaMarket (PKM)</h3>
+            <p class="text-stone-500 mt-1">Merancang UI/UX antarmuka toko digital dan integrasi fitur transaksi UMKM.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYEK / PORTFOLIO -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-sm">
+        <h2 class="font-bold text-base mb-4 text-[#0f2c59]">Proyek Utama</h2>
+        <div class="space-y-3 text-xs">
+          <div class="flex justify-between items-center p-3 bg-stone-50 rounded-lg border border-stone-200">
+            <div>
+              <h3 class="font-bold text-stone-800">TOBAKU AI Landing Page</h3>
+              <p class="text-stone-500">HTML5, External CSS Murni</p>
+            </div>
+            <a href="index.html" class="px-3 py-1 bg-[#991b1b] text-white rounded font-semibold hover:bg-red-800 transition">Buka</a>
+          </div>
+
+          <div class="flex justify-between items-center p-3 bg-stone-50 rounded-lg border border-stone-200">
+            <div>
+              <h3 class="font-bold text-stone-800">TOBAKU AI Blog Platform</h3>
+              <p class="text-stone-500">Bootstrap 5 & Bootstrap Icons</p>
+            </div>
+            <a href="blog.html" class="px-3 py-1 bg-[#991b1b] text-white rounded font-semibold hover:bg-red-800 transition">Buka</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="text-center py-6 text-xs text-stone-400 border-t border-stone-200 bg-white">
+    &copy; 2026 TOBAKU AI. Built with Tailwind CSS 4.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TOBAKU AI - Blog & Informasi AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    :root {
+      --bg-toba-warm: #f8f6f0;
+      --toba-blue: #0f2c59;
+      --toba-red: #991b1b;
+    }
+    body { background-color: var(--bg-toba-warm); color: #1e1b18; }
+    .nav-saas { background: rgba(248, 246, 240, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e7e5e4; }
+    .card-saas {
+      border: 1px solid #e7e5e4;
+      border-radius: 16px;
+      transition: all 0.2s ease;
+      background: white;
+    }
+    .card-saas:hover {
+      border-color: var(--toba-red);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(153, 27, 27, 0.08);
+    }
+    .text-toba-blue { color: var(--toba-blue); }
+    .text-toba-red { color: var(--toba-red); }
+    .badge-toba { background-color: #fef2f2; color: var(--toba-red); font-weight: 700; border: 1px solid #fecaca; }
+    .btn-filter.active { background-color: var(--toba-red); color: white; border-color: var(--toba-red); }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg nav-saas sticky-top py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-toba-blue" href="index.html">TOBAKU<span class="text-toba-red">.AI</span></a>
+      <div class="navbar-nav ms-auto gap-4">
+        <a class="nav-link text-secondary" href="index.html">Beranda</a>
+        <a class="nav-link active fw-bold text-toba-red" href="blog.html">Blog</a>
+        <a class="nav-link text-secondary" href="cv.html">CV</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="mb-4">
+      <h1 class="fw-bold text-toba-blue">Blog & Wawasan AI</h1>
+      <p class="text-secondary">Artikel teknis dan penerapan Artificial Intelligence untuk kawasan Toba.</p>
+    </div>
+
+    <div class="row g-3 mb-5 align-items-center">
+      <div class="col-md-6">
+        <input type="text" id="searchInput" class="form-control rounded-3" placeholder="Cari artikel (misal: UMKM, Generative AI)..." onkeyup="filterArticles()">
+      </div>
+      <div class="col-md-6 d-flex gap-2 flex-wrap">
+        <button class="btn btn-sm btn-outline-secondary btn-filter active rounded-pill px-3" onclick="setCategory('All', this)">Semua</button>
+        <button class="btn btn-sm btn-outline-secondary btn-filter rounded-pill px-3" onclick="setCategory('UMKM', this)">UMKM</button>
+        <button class="btn btn-sm btn-outline-secondary btn-filter rounded-pill px-3" onclick="setCategory('Pariwisata', this)">Pariwisata</button>
+        <button class="btn btn-sm btn-outline-secondary btn-filter rounded-pill px-3" onclick="setCategory('LLM', this)">LLM & Data</button>
+      </div>
+    </div>
+
+    <div class="row g-4" id="articleGrid">
+      
+      <div class="col-md-6 col-lg-3 article-item" data-category="UMKM">
+        <div class="card h-100 card-saas p-3">
+          <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>UMKM</span>
+          <h5 class="fw-bold fs-6">
+            <a href="blog-detail.html?id=omset-umkm" class="text-decoration-none text-toba-blue">Otomatisasi Harga & Stok UMKM Toba</a>
+          </h5>
+          <p class="text-secondary small flex-grow-1 mt-2">Bagaimana algoritma TOBAKU AI menentukan estimasi harga rasional bagi perajin lokal.</p>
+          <div class="pt-3 border-top small text-muted d-flex justify-content-between">
+            <span><i class="bi bi-person me-1"></i>Rachel</span>
+            <span><i class="bi bi-calendar me-1"></i>18 Sep 2026</span>
+          </div>
+          <a href="blog-detail.html?id=omset-umkm" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 article-item" data-category="Pariwisata">
+        <div class="card h-100 card-saas p-3">
+          <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>Pariwisata</span>
+          <h5 class="fw-bold fs-6">
+            <a href="blog-detail.html?id=prediksi-wisata" class="text-decoration-none text-toba-blue">Prediksi Tren Wisatawan Danau Toba</a>
+          </h5>
+          <p class="text-secondary small flex-grow-1 mt-2">Pemetaan pola kunjungan wisatawan berbasis AI untuk mengoptimalkan sektor penginapan.</p>
+          <div class="pt-3 border-top small text-muted d-flex justify-content-between">
+            <span><i class="bi bi-person me-1"></i>Tim AI</span>
+            <span><i class="bi bi-calendar me-1"></i>15 Sep 2026</span>
+          </div>
+          <a href="blog-detail.html?id=prediksi-wisata" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 article-item" data-category="LLM">
+        <div class="card h-100 card-saas p-3">
+          <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>LLM</span>
+          <h5 class="fw-bold fs-6">
+            <a href="blog-detail.html?id=llm-dokumen" class="text-decoration-none text-toba-blue">Ekstraksi Dokumen Cerdas Berbasis LLM</a>
+          </h5>
+          <p class="text-secondary small flex-grow-1 mt-2">Pemanfaatan model bahasa besar untuk mempercepat otomatisasi data dan informasi publik.</p>
+          <div class="pt-3 border-top small text-muted d-flex justify-content-between">
+            <span><i class="bi bi-person me-1"></i>Rachel</span>
+            <span><i class="bi bi-calendar me-1"></i>10 Sep 2026</span>
+          </div>
+          <a href="blog-detail.html?id=llm-dokumen" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3 article-item" data-category="LLM">
+        <div class="card h-100 card-saas p-3">
+          <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>LLM</span>
+          <h5 class="fw-bold fs-6">
+            <a href="blog-detail.html?id=etika-ai" class="text-decoration-none text-toba-blue">Etika & Privasi Data dalam AI Lokal</a>
+          </h5>
+          <p class="text-secondary small flex-grow-1 mt-2">Pentingnya menjaga keamanan data budaya dan identitas masyarakat lokal dalam era AI.</p>
+          <div class="pt-3 border-top small text-muted d-flex justify-content-between">
+            <span><i class="bi bi-person me-1"></i>Tim AI</span>
+            <span><i class="bi bi-calendar me-1"></i>05 Sep 2026</span>
+          </div>
+          <a href="blog-detail.html?id=etika-ai" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    let activeCategory = 'All';
+
+    function setCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterArticles();
+    }
+
+    function filterArticles() {
+      const searchVal = document.getElementById('searchInput').value.toLowerCase();
+      const articles = document.querySelectorAll('.article-item');
+
+      articles.forEach(art => {
+        const title = art.querySelector('h5').innerText.toLowerCase();
+        const desc = art.querySelector('p').innerText.toLowerCase();
+        const category = art.getAttribute('data-category');
+
+        const matchesSearch = title.includes(searchVal) || desc.includes(searchVal);
+        const matchesCategory = activeCategory === 'All' || category === activeCategory;
+
+        art.style.display = (matchesSearch && matchesCategory) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
