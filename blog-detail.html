@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Otomatisasi Harga & Stok UMKM Toba - TOBAKU AI</title>
-  <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
 </head>
 <body>
 
-  <!-- Navigasi Header Bootstrap -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
       <div class="container">
@@ -36,13 +34,11 @@
     </nav>
   </header>
 
-  <!-- Konten Detail Artikel -->
   <main class="container py-5">
     <div class="row justify-content-center">
       <article class="col-lg-9 card-saas p-0 shadow-sm">
         
-        <!-- Cover Lebar -->
-        <img src="assets/img/blog-umkm.jpg" id="coverImage" onerror="this.src='https://images.unsplash.com/photo-1556742049-0a67238a04ed?auto=format&fit=crop&w=1200&q=80'" alt="Cover Artikel" class="hero-cover-img">
+        <img src="assets/img/blog-umkm.jpg" id="coverImage" data-fallback="https://images.unsplash.com/photo-1556742049-0a67238a04ed?auto=format&fit=crop&w=1200&q=80" alt="Cover Artikel" class="hero-cover-img img-fallback">
 
         <div class="p-4 p-md-5">
           <span class="badge bg-danger text-white fw-bold mb-3" id="kategori"><i class="bi bi-tag-fill me-1"></i>UMKM</span>
@@ -59,7 +55,6 @@
             <strong>Informasi AI:</strong> Artikel ini dipublikasikan sebagai bagian dari dokumentasi pengembangan platform TOBAKU AI.
           </div>
 
-          <!-- KONTEN STATIS UTAMA -->
           <section id="konten" class="lh-lg text-dark">
             <p>Pengembangan usaha mikro, kecil, dan menengah (UMKM) di kawasan Danau Toba menghadapi tantangan besar dalam menetapkan harga produk serta mengelola stok barang. Melalui implementasi kecerdasan buatan, TOBAKU AI menghadirkan solusi berupa kalkulasi otomatis biaya produksi dan perkiraan harga pasar yang paling tepat.</p>
             
@@ -79,7 +74,6 @@
             </ul>
           </section>
 
-          <!-- Form Komentar (Aman dari XSS Injection & Tanpa Inline Event) -->
           <section class="mt-5 pt-4 border-top">
             <h2 class="h4 fw-bold mb-4 brand-navy"><i class="bi bi-chat-left-text me-2"></i>Komentar</h2>
             
@@ -119,10 +113,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".img-fallback").forEach(img => {
+        img.addEventListener("error", function () {
+          const fallback = this.getAttribute("data-fallback");
+          if (fallback && this.src !== fallback) {
+            this.src = fallback;
+          }
+        });
+      });
+
       const params = new URLSearchParams(window.location.search);
       const id = params.get("id");
 
-      // Hanya override jika memilih artikel selain artikel default (omset-umkm)
       const secondaryArticles = {
         "prediksi-wisata": {
           judul: "Prediksi Tren Wisatawan Danau Toba",
@@ -130,7 +132,12 @@
           penulis: "Tim AI Del",
           tanggal: "15 Sep 2026",
           cover: "assets/img/blog-pariwisata.jpg",
-          isi: `<p>Sektor pariwisata di Danau Toba sangat dipengaruhi oleh tren musiman dan hari libur nasional. TOBAKU AI mengolah data historis kedatangan wisatawan untuk membantu penyedia jasa tur dan akomodasi dalam mengantisipasi lonjakan pengunjung.</p><p>Dengan pemodelan prediktif, pemilik penginapan dapat menyesuaikan ketersediaan kamar dan promosi layanan jauh sebelum musim liburan dimulai.</p>`
+          fallback: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+          isi: `
+            <p>Sektor pariwisata di kawasan Danau Toba sangat dipengaruhi oleh tren musim liburan dan ajang kebudayaan nasional maupun internasional. TOBAKU AI mengolah data historis kedatangan wisatawan untuk membantu penyedia jasa tur dan akomodasi lokal dalam mengantisipasi pemlonjakan pengunjung secara presisi.</p>
+            <p>Melalui pemodelan prediktif berbasis Machine Learning, pemilik hotel dan homestay dapat menyesuaikan strategi pemasaran serta ketersediaan kamar jauh sebelum musim liburan tiba. Hal ini mencegah terjadinya kelebihan kapasitas atau fluktuasi harga yang terlalu drastis.</p>
+            <p>Selain bermanfaat bagi pengelola usaha, wisatawan juga diuntungkan dengan kemudahan mendapatkan estimasi tingkat keramaian destinasi wisata pilihan mereka. Penerapan teknologi analitik ini memperkuat ekosistem pariwisata berkelanjutan di Sumatera Utara.</p>
+          `
         },
         "llm-dokumen": {
           judul: "Ekstraksi Dokumen Cerdas Berbasis LLM",
@@ -138,7 +145,12 @@
           penulis: "Rachel N. Gurning",
           tanggal: "10 Sep 2026",
           cover: "assets/img/blog-llm.jpg",
-          isi: `<p>Proses analisis berkas dan dokumen layanan publik sering kali memerlukan waktu yang lama jika dilakukan secara manual. Pemanfaatan Large Language Model (LLM) memungkinkan pencarian dan ekstraksi informasi penting dalam hitungan detik.</p>`
+          fallback: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+          isi: `
+            <p>Proses analisis berkas dan pencarian data dalam dokumen administrasi layanan publik kerap memakan waktu lama apabila dilakukan secara manual. Implementasi Large Language Model (LLM) modern memungkinkan ekstraksi informasi penting secara otomatis dan akurat dalam hitungan detik.</p>
+            <p>Dengan menerapkan metode Natural Language Processing (NLP), sistem mampu memahami struktur teks kompleks, merangkum poin penting, serta mengelompokkan kategori dokumen resmi tanpa mengabaikan aspek akurasi informasi.</p>
+            <p>Langkah otomatisasi berbasis LLM ini tidak hanya memangkas birokrasi pengerjaan data, tetapi juga meningkatkan transparansi dan kecepatan pemrosesan data bagi masyarakat umum serta instansi terkait.</p>
+          `
         },
         "etika-ai": {
           judul: "Etika & Privasi Data dalam AI Lokal",
@@ -146,7 +158,12 @@
           penulis: "Tim AI Del",
           tanggal: "05 Sep 2026",
           cover: "assets/img/blog-etika.jpg",
-          isi: `<p>Penerapan kecerdasan buatan harus senantiasa memperhatikan aspek keamanan data pribadi dan etika kebudayaan lokal. TOBAKU AI berkomitmen menerapkan tata kelola data yang transparan dan aman.</p>`
+          fallback: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80",
+          isi: `
+            <p>Di tengah pesatnya perkembangan integrasi Artificial Intelligence pada berbagai bidang kehidupan, isu kerahasiaan data dan etika penggunaan teknologi menjadi pondasi utama yang tidak boleh terabaikan.</p>
+            <p>Dalam konteks pengembangan platform AI lokal seperti TOBAKU AI, perlindungan data kebudayaan, identitas pengguna, dan transaksi UMKM dikelola menggunakan standar keamanan enkripsi yang ketat agar tidak disalahgunakan oleh pihak yang tidak bertanggung jawab.</p>
+            <p>Penerapan tata kelola AI yang etis dan transparan bertujuan untuk membangun kepercayaan publik. Dengan demikian, penerapan inovasi kecerdasan buatan dapat memberikan nilai positif yang aman bagi seluruh lapisan masyarakat.</p>
+          `
         }
       };
 
@@ -157,11 +174,14 @@
         document.getElementById("kategori").innerHTML = `<i class="bi bi-tag-fill me-1"></i>` + item.kategori;
         document.getElementById("penulis").innerText = item.penulis;
         document.getElementById("tanggal").innerText = item.tanggal;
-        document.getElementById("coverImage").src = item.cover;
+        
+        const coverImg = document.getElementById("coverImage");
+        coverImg.src = item.cover;
+        coverImg.setAttribute("data-fallback", item.fallback);
+        
         document.getElementById("konten").innerHTML = item.isi;
       }
 
-      // Handling Form Komentar (Event Listener & Aman XSS)
       const commentForm = document.getElementById("commentForm");
       if (commentForm) {
         commentForm.addEventListener("submit", function (e) {

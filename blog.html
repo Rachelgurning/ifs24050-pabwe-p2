@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TOBAKU AI - Blog & Informasi AI</title>
-  <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,7 +14,6 @@
 </head>
 <body>
 
-  <!-- Navigasi Header Bootstrap -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg nav-saas py-3">
       <div class="container">
@@ -36,14 +34,12 @@
     </nav>
   </header>
 
-  <!-- Konten Utama Blog -->
   <main class="container py-5">
     <div class="mb-4">
       <h1 class="fw-bold text-toba-blue">Blog & Wawasan AI</h1>
       <p class="text-custom-muted">Artikel teknis dan penerapan Artificial Intelligence untuk kawasan Toba.</p>
     </div>
 
-    <!-- Filter dan Pencarian -->
     <div class="row g-3 mb-5 align-items-center">
       <div class="col-md-6">
         <input type="text" id="searchInput" class="form-control rounded-3" placeholder="Cari artikel...">
@@ -56,80 +52,103 @@
       </div>
     </div>
 
-    <!-- Grid Kartu Blog -->
     <div class="row g-4" id="articleGrid">
       
-      <!-- Card Artikel 1 -->
       <div class="col-md-6 col-lg-3 article-item" data-category="UMKM">
         <article class="card h-100 card-saas">
-          <img src="assets/img/blog-umkm.jpg" onerror="this.src='https://images.unsplash.com/photo-1556742049-0a67238a04ed?auto=format&fit=crop&w=600&q=80'" alt="Otomatisasi UMKM Toba" class="card-thumb">
+          <img src="assets/img/blog-umkm.jpg" data-fallback="https://images.unsplash.com/photo-1556742049-0a67238a04ed?auto=format&fit=crop&w=600&q=80" alt="Otomatisasi UMKM Toba" class="card-thumb img-fallback">
           <div class="p-3 d-flex flex-column flex-grow-1">
             <span class="badge badge-toba align-self-start mb-2"><i class="bi bi-tag-fill me-1"></i>UMKM</span>
             <h2 class="fw-bold fs-6">
               <a href="blog-detail.html?id=omset-umkm" class="text-decoration-none text-toba-blue">Otomatisasi Harga & Stok UMKM Toba</a>
             </h2>
             <p class="text-custom-muted small flex-grow-1 mt-2">Bagaimana algoritma TOBAKU AI menentukan estimasi harga rasional bagi perajin lokal.</p>
-            <div class="pt-3 border-top small text-dark d-flex justify-content-between align-items-center flex-wrap gap-1">
-              <span><i class="bi bi-calendar me-1"></i>18 Sep 2026</span>
-              <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>5 min read</span>
+            
+            <div class="pt-3 border-top small text-dark d-flex flex-column gap-1">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold text-toba-blue"><i class="bi bi-person-circle me-1"></i>Rachel N. Gurning</span>
+                <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>5 min read</span>
+              </div>
+              <div class="text-muted small">
+                <i class="bi bi-calendar me-1"></i>18 Sep 2026
+              </div>
             </div>
+
             <a href="blog-detail.html?id=omset-umkm" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
         </article>
       </div>
 
-      <!-- Card Artikel 2 -->
       <div class="col-md-6 col-lg-3 article-item" data-category="Pariwisata">
         <article class="card h-100 card-saas">
-          <img src="assets/img/blog-pariwisata.jpg" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80'" alt="Prediksi Wisata Danau Toba" class="card-thumb">
+          <img src="assets/img/blog-pariwisata.jpg" data-fallback="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Prediksi Wisata Danau Toba" class="card-thumb img-fallback">
           <div class="p-3 d-flex flex-column flex-grow-1">
             <span class="badge badge-toba align-self-start mb-2"><i class="bi bi-tag-fill me-1"></i>Pariwisata</span>
             <h2 class="fw-bold fs-6">
               <a href="blog-detail.html?id=prediksi-wisata" class="text-decoration-none text-toba-blue">Prediksi Tren Wisatawan Danau Toba</a>
             </h2>
             <p class="text-custom-muted small flex-grow-1 mt-2">Pemetaan pola kunjungan wisatawan berbasis AI untuk mengoptimalkan sektor penginapan.</p>
-            <div class="pt-3 border-top small text-dark d-flex justify-content-between align-items-center flex-wrap gap-1">
-              <span><i class="bi bi-calendar me-1"></i>15 Sep 2026</span>
-              <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>4 min read</span>
+            
+            <div class="pt-3 border-top small text-dark d-flex flex-column gap-1">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold text-toba-blue"><i class="bi bi-person-circle me-1"></i>Tim AI Del</span>
+                <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>4 min read</span>
+              </div>
+              <div class="text-muted small">
+                <i class="bi bi-calendar me-1"></i>15 Sep 2026
+              </div>
             </div>
+
             <a href="blog-detail.html?id=prediksi-wisata" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
         </article>
       </div>
 
-      <!-- Card Artikel 3 -->
       <div class="col-md-6 col-lg-3 article-item" data-category="LLM">
         <article class="card h-100 card-saas">
-          <img src="assets/img/blog-llm.jpg" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80'" alt="Ekstraksi Dokumen LLM" class="card-thumb">
+          <img src="assets/img/blog-llm.jpg" data-fallback="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Ekstraksi Dokumen LLM" class="card-thumb img-fallback">
           <div class="p-3 d-flex flex-column flex-grow-1">
             <span class="badge badge-toba align-self-start mb-2"><i class="bi bi-tag-fill me-1"></i>LLM</span>
             <h2 class="fw-bold fs-6">
               <a href="blog-detail.html?id=llm-dokumen" class="text-decoration-none text-toba-blue">Ekstraksi Dokumen Cerdas Berbasis LLM</a>
             </h2>
             <p class="text-custom-muted small flex-grow-1 mt-2">Pemanfaatan model bahasa besar untuk mempercepat otomatisasi data dan informasi publik.</p>
-            <div class="pt-3 border-top small text-dark d-flex justify-content-between align-items-center flex-wrap gap-1">
-              <span><i class="bi bi-calendar me-1"></i>10 Sep 2026</span>
-              <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>6 min read</span>
+            
+            <div class="pt-3 border-top small text-dark d-flex flex-column gap-1">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold text-toba-blue"><i class="bi bi-person-circle me-1"></i>Rachel N. Gurning</span>
+                <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>6 min read</span>
+              </div>
+              <div class="text-muted small">
+                <i class="bi bi-calendar me-1"></i>10 Sep 2026
+              </div>
             </div>
+
             <a href="blog-detail.html?id=llm-dokumen" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
         </article>
       </div>
 
-      <!-- Card Artikel 4 -->
       <div class="col-md-6 col-lg-3 article-item" data-category="LLM">
         <article class="card h-100 card-saas">
-          <img src="assets/img/blog-etika.jpg" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80'" alt="Etika AI Lokal" class="card-thumb">
+          <img src="assets/img/blog-etika.jpg" data-fallback="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Etika AI Lokal" class="card-thumb img-fallback">
           <div class="p-3 d-flex flex-column flex-grow-1">
             <span class="badge badge-toba align-self-start mb-2"><i class="bi bi-tag-fill me-1"></i>LLM</span>
             <h2 class="fw-bold fs-6">
               <a href="blog-detail.html?id=etika-ai" class="text-decoration-none text-toba-blue">Etika & Privasi Data dalam AI Lokal</a>
             </h2>
             <p class="text-custom-muted small flex-grow-1 mt-2">Pentingnya menjaga keamanan data budaya dan identitas masyarakat lokal dalam era AI.</p>
-            <div class="pt-3 border-top small text-dark d-flex justify-content-between align-items-center flex-wrap gap-1">
-              <span><i class="bi bi-calendar me-1"></i>05 Sep 2026</span>
-              <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>3 min read</span>
+            
+            <div class="pt-3 border-top small text-dark d-flex flex-column gap-1">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-semibold text-toba-blue"><i class="bi bi-person-circle me-1"></i>Tim AI Del</span>
+                <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>3 min read</span>
+              </div>
+              <div class="text-muted small">
+                <i class="bi bi-calendar me-1"></i>05 Sep 2026
+              </div>
             </div>
+
             <a href="blog-detail.html?id=etika-ai" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
         </article>
@@ -147,6 +166,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".img-fallback").forEach(img => {
+        img.addEventListener("error", function () {
+          const fallback = this.getAttribute("data-fallback");
+          if (fallback && this.src !== fallback) {
+            this.src = fallback;
+          }
+        });
+      });
+
       let activeCategory = 'All';
       const searchInput = document.getElementById('searchInput');
       const filterButtons = document.querySelectorAll('.btn-filter');
@@ -167,7 +195,6 @@
         });
       }
 
-      // Event Listener tanpa Inline Handler
       searchInput.addEventListener('keyup', filterArticles);
 
       filterButtons.forEach(btn => {
