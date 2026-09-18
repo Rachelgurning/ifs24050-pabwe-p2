@@ -6,25 +6,26 @@
   <title>Detail Artikel - TOBAKU AI</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <style>
-    body { background-color: #f8f6f0; color: #1e1b18; }
-    .card-detail { background: #ffffff; border: 1px solid #e7e5e4; border-radius: 20px; overflow: hidden; }
-    .hero-cover-img { width: 100%; height: 360px; object-fit: cover; }
-    .brand-navy { color: #0f2c59; }
-    .brand-red { color: #991b1b; }
-  </style>
+  <link rel="stylesheet" href="assets/css/blog-style.css">
 </head>
 <body>
 
-  <!-- Navigasi Header Bootstrap -->
+  <!-- Navigasi Header Bootstrap dengan Collapsible Menu -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
       <div class="container">
         <a class="navbar-brand fw-bold brand-navy" href="index.html">TOBAKU<span class="brand-red">.AI</span></a>
-        <div class="navbar-nav ms-auto gap-4">
-          <a class="nav-link text-dark fw-semibold" href="index.html">Beranda</a>
-          <a class="nav-link active fw-bold brand-red" href="blog.html">Blog</a>
-          <a class="nav-link text-dark fw-semibold" href="cv.html">CV</a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDetail" aria-controls="navbarDetail" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarDetail">
+          <div class="navbar-nav ms-auto gap-3 mt-3 mt-lg-0">
+            <a class="nav-link text-dark fw-semibold" href="index.html">Beranda</a>
+            <a class="nav-link active fw-bold brand-red" href="blog.html">Blog</a>
+            <a class="nav-link text-dark fw-semibold" href="cv.html">CV</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -33,10 +34,10 @@
   <!-- Konten Detail Artikel -->
   <main class="container py-5">
     <div class="row justify-content-center">
-      <article class="col-lg-9 card-detail p-0 shadow-sm">
+      <article class="col-lg-9 card-saas p-0 shadow-sm">
         
-        <!-- Cover Lebar Sesuai Ketentuan Wajib -->
-        <img src="assets/img/blog-umkm.jpg" id="coverImage" alt="Cover Artikel" class="hero-cover-img">
+        <!-- Cover Lebar -->
+        <img src="assets/img/blog-umkm.jpg" id="coverImage" onerror="this.src='https://images.unsplash.com/photo-1556742049-0a67238a04ed?auto=format&fit=crop&w=1200&q=80'" alt="Cover Artikel" class="hero-cover-img">
 
         <div class="p-4 p-md-5">
           <span class="badge bg-danger text-white fw-bold mb-3" id="kategori"><i class="bi bi-tag-fill me-1"></i>Kategori</span>
@@ -94,6 +95,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id") || "omset-umkm";
@@ -107,10 +109,15 @@
         cover: "assets/img/blog-umkm.jpg",
         isi: `
           <p>Pengembangan usaha mikro, kecil, dan menengah (UMKM) di kawasan Danau Toba menghadapi tantangan besar dalam menetapkan harga produk serta mengelola stok barang. Melalui implementasi kecerdasan buatan, TOBAKU AI menghadirkan solusi berupa kalkulasi otomatis biaya produksi dan perkiraan harga pasar yang paling tepat.</p>
+          
+          <p>Sistem ini mengumpulkan data harga bahan baku secara <i>real-time</i> dan memberikan rekomendasi rasional agar penjual tidak mengalami kerugian. Di samping itu, prediksi batas minimum stok barang mencegah terjadinya kehabisan pasokan saat puncak musim liburan nasional maupun ajang internasional di Toba.</p>
+          
+          <p>Dengan hadirnya platform digital ini, pelaku usaha lokal tidak hanya dapat mempertahankan harga persaingan yang sehat, namun juga meningkatkan efisiensi operasional. Integrasi teknologi AI menjadi langkah konkrit dalam mendorong digitalisasi UMKM daerah secara berkelanjutan.</p>
+
           <blockquote class="blockquote border-start border-4 border-danger ps-3 my-4 italic text-dark">
             "Teknologi AI bukan untuk menggantikan pedagang lokal, melainkan memperkuat daya saing mereka di era digital."
           </blockquote>
-          <p>Sistem ini mengumpulkan data harga bahan baku secara <i>real-time</i> dan memberikan rekomendasi rasional agar penjual tidak mengalami kerugian. Di samping itu, prediksi batas minimum stok barang mencegah terjadinya kehabisan pasokan saat puncak musim liburan.</p>
+
           <h2 class="h5 fw-bold text-dark mt-4">Manfaat Utama bagi Pelaku Usaha:</h2>
           <ul>
             <li>Penetapan harga yang rasional dan transparan.</li>

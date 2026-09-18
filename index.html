@@ -13,8 +13,12 @@
     <div class="container">
       <div class="nav-container">
         <a href="index.html" class="logo">TOBAKU<span>.AI</span></a>
+        
+        <!-- Toggle Button untuk Mobile -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+
         <nav>
-          <ul class="nav-links">
+          <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">Beranda</a></li>
             <li><a href="#layanan">Layanan</a></li>
             <li><a href="#tentang">Tentang</a></li>
@@ -78,7 +82,7 @@
           <h2>Mengapa Memilih TOBAKU AI?</h2>
         </div>
         <p class="about-text">
-          TOBAKU AI menggabungkan teknologi kecerdasan buatan mutakhir dengan pemahaman mendalam tentang ekosistem lokal kawasan Danau Toba. Kami berfokus memberikan solusi nyata yang mudah diakses oleh pelaku UMKM, industri pariwisata, dan lembaga publik.
+          TOBAKU AI menggabungkan teknologi kecerdasan buatan mutakhir dengan pemahaman mendalam tentang ekosistem lokal kawasan Danau Toba. Kami berfokus memberikan solusi nyata yang mudah diakses oleh pelaku UMKM, industri pariwisata, dan lembaga publik untuk mendorong percepatan ekonomi digital secara inklusif.
         </p>
       </div>
     </section>
@@ -109,7 +113,7 @@
     </section>
   </main>
 
-  <!-- Footer dengan Quick Links -->
+  <!-- Footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -142,5 +146,14 @@
     </div>
   </footer>
 
+  <script>
+    // Script Toggle Mobile Navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
 </body>
 </html>

@@ -36,7 +36,7 @@ body {
   padding: 0 24px;
 }
 
-/* Navigation */
+/* Navigasi Header */
 .navbar {
   position: sticky;
   top: 0;
@@ -51,6 +51,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -81,6 +82,15 @@ body {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--toba-red);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--toba-blue);
 }
 
 /* Hero Section */
@@ -139,11 +149,17 @@ body {
   transition: all 0.2s;
   border: none;
   cursor: pointer;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn-primary:hover {
   background-color: #7f1d1d;
   transform: translateY(-2px);
+}
+
+.btn-full {
+  width: 100%;
 }
 
 .btn-secondary {
@@ -157,9 +173,13 @@ body {
   font-size: 0.95rem;
 }
 
-/* Feature & Service Sections */
+/* Sections & Utility Classes */
 .section {
   padding: 80px 0;
+}
+
+.bg-white-surface {
+  background-color: #ffffff;
 }
 
 .section-title {
@@ -171,6 +191,15 @@ body {
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--toba-blue);
+}
+
+.about-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
 
 .grid-3 {
@@ -217,7 +246,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Contact Form */
+/* Form Kontak */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -249,21 +278,153 @@ body {
   font-size: 0.9rem;
 }
 
+/* Footer Classes */
 footer {
   border-top: 1px solid var(--border-color);
-  padding: 32px 0;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  padding: 48px 0 24px;
   background: var(--surface-card);
 }
 
-/* Responsive Media Queries */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+.footer-links h4 {
+  font-size: 0.95rem;
+  color: var(--toba-blue);
+  margin-bottom: 16px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--toba-red);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Media Query Mobile Navigation */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: -24px;
+    right: -24px;
+    background: #ffffff;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    gap: 16px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
   .hero h1 {
     font-size: 2.2rem;
   }
+
   .grid-3 {
     grid-template-columns: 1fr;
   }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
 }
+/* Custom CSS khusus untuk halaman Bootstrap Blog */
+:root {
+  --bg-toba-warm: #f8f6f0;
+  --toba-blue: #0f2c59;
+  --toba-red: #991b1b;
+}
+
+body { 
+  background-color: var(--bg-toba-warm); 
+  color: #1e1b18; 
+}
+
+.nav-saas { 
+  background: rgba(248, 246, 240, 0.95); 
+  backdrop-filter: blur(12px); 
+  border-bottom: 1px solid #e7e5e4; 
+}
+
+.card-saas {
+  border: 1px solid #e7e5e4;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.card-saas:hover {
+  border-color: var(--toba-red);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(153, 27, 27, 0.08);
+}
+
+.card-thumb {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.hero-cover-img { 
+  width: 100%; 
+  height: 360px; 
+  object-fit: cover; 
+}
+
+.text-toba-blue, .brand-navy { color: var(--toba-blue); }
+.text-toba-red, .brand-red { color: var(--toba-red); }
+.badge-toba { background-color: var(--toba-red); color: #ffffff; font-weight: 700; }
+
+.btn-filter-custom {
+  color: #374151;
+  border-color: #6b7280;
+}
+
+.btn-filter-custom:hover, 
+.btn-filter-custom.active {
+  background-color: var(--toba-red);
+  color: #ffffff;
+  border-color: var(--toba-red);
+}
+
+.text-custom-muted { color: #374151 !important; }
