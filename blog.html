@@ -12,13 +12,20 @@
       --toba-blue: #0f2c59;
       --toba-red: #991b1b;
     }
-    body { background-color: var(--bg-toba-warm); color: #1e1b18; }
-    .nav-saas { background: rgba(248, 246, 240, 0.95); backdrop-filter: blur(12px); border-bottom: 1px solid #e7e5e4; }
+    body { 
+      background-color: var(--bg-toba-warm); 
+      color: #1e1b18; 
+    }
+    .nav-saas { 
+      background: rgba(248, 246, 240, 0.95); 
+      backdrop-filter: blur(12px); 
+      border-bottom: 1px solid #e7e5e4; 
+    }
     .card-saas {
       border: 1px solid #e7e5e4;
       border-radius: 16px;
       transition: all 0.2s ease;
-      background: white;
+      background: #ffffff;
     }
     .card-saas:hover {
       border-color: var(--toba-red);
@@ -33,9 +40,10 @@
       color: #374151;
       border-color: #6b7280;
     }
-    .btn-filter-custom:hover, .btn-filter-custom.active {
+    .btn-filter-custom:hover, 
+    .btn-filter-custom.active {
       background-color: var(--toba-red);
-      color: white;
+      color: #ffffff;
       border-color: var(--toba-red);
     }
     .text-custom-muted { color: #374151 !important; }
@@ -43,16 +51,18 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg nav-saas sticky-top py-3">
-    <div class="container">
-      <a class="navbar-brand fw-bold text-toba-blue" href="index.html">TOBAKU<span class="text-toba-red">.AI</span></a>
-      <div class="navbar-nav ms-auto gap-4">
-        <a class="nav-link text-dark fw-semibold" href="index.html">Beranda</a>
-        <a class="nav-link active fw-bold text-toba-red" href="blog.html">Blog</a>
-        <a class="nav-link text-dark fw-semibold" href="cv.html">CV</a>
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg nav-saas py-3">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-toba-blue" href="index.html">TOBAKU<span class="text-toba-red">.AI</span></a>
+        <div class="navbar-nav ms-auto gap-4">
+          <a class="nav-link text-dark fw-semibold" href="index.html">Beranda</a>
+          <a class="nav-link active fw-bold text-toba-red" href="blog.html">Blog</a>
+          <a class="nav-link text-dark fw-semibold" href="cv.html">CV</a>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </header>
 
   <main class="container py-5">
     <div class="mb-4">
@@ -75,7 +85,7 @@
     <div class="row g-4" id="articleGrid">
       
       <div class="col-md-6 col-lg-3 article-item" data-category="UMKM">
-        <div class="card h-100 card-saas p-3">
+        <article class="card h-100 card-saas p-3">
           <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>UMKM</span>
           <h2 class="fw-bold fs-6">
             <a href="blog-detail.html?id=omset-umkm" class="text-decoration-none text-toba-blue">Otomatisasi Harga & Stok UMKM Toba</a>
@@ -86,11 +96,11 @@
             <span><i class="bi bi-calendar me-1"></i>18 Sep 2026</span>
           </div>
           <a href="blog-detail.html?id=omset-umkm" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
-        </div>
+        </article>
       </div>
 
       <div class="col-md-6 col-lg-3 article-item" data-category="Pariwisata">
-        <div class="card h-100 card-saas p-3">
+        <article class="card h-100 card-saas p-3">
           <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>Pariwisata</span>
           <h2 class="fw-bold fs-6">
             <a href="blog-detail.html?id=prediksi-wisata" class="text-decoration-none text-toba-blue">Prediksi Tren Wisatawan Danau Toba</a>
@@ -101,11 +111,11 @@
             <span><i class="bi bi-calendar me-1"></i>15 Sep 2026</span>
           </div>
           <a href="blog-detail.html?id=prediksi-wisata" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
-        </div>
+        </article>
       </div>
 
       <div class="col-md-6 col-lg-3 article-item" data-category="LLM">
-        <div class="card h-100 card-saas p-3">
+        <article class="card h-100 card-saas p-3">
           <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>LLM</span>
           <h2 class="fw-bold fs-6">
             <a href="blog-detail.html?id=llm-dokumen" class="text-decoration-none text-toba-blue">Ekstraksi Dokumen Cerdas Berbasis LLM</a>
@@ -116,11 +126,11 @@
             <span><i class="bi bi-calendar me-1"></i>10 Sep 2026</span>
           </div>
           <a href="blog-detail.html?id=llm-dokumen" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
-        </div>
+        </article>
       </div>
 
       <div class="col-md-6 col-lg-3 article-item" data-category="LLM">
-        <div class="card h-100 card-saas p-3">
+        <article class="card h-100 card-saas p-3">
           <span class="badge badge-toba align-self-start mb-3"><i class="bi bi-tag-fill me-1"></i>LLM</span>
           <h2 class="fw-bold fs-6">
             <a href="blog-detail.html?id=etika-ai" class="text-decoration-none text-toba-blue">Etika & Privasi Data dalam AI Lokal</a>
@@ -131,11 +141,17 @@
             <span><i class="bi bi-calendar me-1"></i>05 Sep 2026</span>
           </div>
           <a href="blog-detail.html?id=etika-ai" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
-        </div>
+        </article>
       </div>
 
     </div>
   </main>
+
+  <footer class="bg-white border-top py-4 text-center text-muted small">
+    <div class="container">
+      &copy; 2026 TOBAKU AI. Built with Bootstrap 5.
+    </div>
+  </footer>
 
   <script>
     let activeCategory = 'All';

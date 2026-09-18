@@ -7,7 +7,7 @@
   --toba-red-soft: #fef2f2;
   --toba-blue: #0f2c59;
   --text-dark: #1e1b18;
-  --text-muted: #44403c; /* Gelap untuk memenuhi kontras WCAG 2 AA */
+  --text-muted: #44403c;
   --border-color: #e7e5e4;
   --radius-pill: 999px;
   --radius-card: 16px;
@@ -36,7 +36,7 @@ body {
   padding: 0 24px;
 }
 
-/* NAVBAR */
+/* Navigation */
 .navbar {
   position: sticky;
   top: 0;
@@ -72,17 +72,18 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #374151; /* Kontras dinaikkan */
+  color: #374151;
   font-weight: 600;
   font-size: 0.9rem;
   transition: color 0.2s;
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--toba-red);
 }
 
-/* HERO */
+/* Hero Section */
 .hero {
   padding: 80px 0 64px;
   text-align: center;
@@ -130,7 +131,7 @@ body {
 .btn-primary {
   padding: 12px 28px;
   background-color: var(--toba-red);
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
   border-radius: 10px;
@@ -156,7 +157,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* LAYANAN & TENTANG */
+/* Feature & Service Sections */
 .section {
   padding: 80px 0;
 }
@@ -216,11 +217,11 @@ body {
   font-size: 0.9rem;
 }
 
-/* FORM KONTAK */
+/* Contact Form */
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
-  background: white;
+  background: #ffffff;
   padding: 32px;
   border-radius: var(--radius-card);
   border: 1px solid var(--border-color);
@@ -257,7 +258,12 @@ footer {
   background: var(--surface-card);
 }
 
+/* Responsive Media Queries */
 @media (max-width: 768px) {
-  .hero h1 { font-size: 2.2rem; }
-  .grid-3 { grid-template-columns: 1fr; }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
 }
