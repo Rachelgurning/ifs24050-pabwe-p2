@@ -17,9 +17,9 @@
     <div class="container">
       <a class="navbar-brand fw-bold" style="color: #0f2c59;" href="index.html">TOBAKU<span style="color: #991b1b;">.AI</span></a>
       <div class="navbar-nav ms-auto gap-4">
-        <a class="nav-link text-secondary" href="index.html">Beranda</a>
+        <a class="nav-link text-dark fw-semibold" href="index.html">Beranda</a>
         <a class="nav-link active fw-bold" style="color: #991b1b;" href="blog.html">Blog</a>
-        <a class="nav-link text-secondary" href="cv.html">CV</a>
+        <a class="nav-link text-dark fw-semibold" href="cv.html">CV</a>
       </div>
     </div>
   </nav>
@@ -28,32 +28,31 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 card-detail p-4 p-md-5">
         
-        <span class="badge bg-danger-subtle text-danger fw-bold mb-3" id="kategori"><i class="bi bi-tag-fill me-1"></i>Kategori</span>
+        <span class="badge bg-danger text-white fw-bold mb-3" id="kategori"><i class="bi bi-tag-fill me-1"></i>Kategori</span>
         <h1 class="fw-bold mb-3" style="color: #0f2c59;" id="judul">Judul Artikel Loading...</h1>
         
-        <div class="text-muted small pb-3 mb-4 border-bottom d-flex gap-3">
+        <div class="text-dark small pb-3 mb-4 border-bottom d-flex gap-3">
           <span><i class="bi bi-person me-1"></i><span id="penulis">Penulis</span></span>
           <span><i class="bi bi-calendar me-1"></i><span id="tanggal">Tanggal</span></span>
           <span><i class="bi bi-clock me-1"></i>5 min read</span>
         </div>
 
-        <div class="alert alert-info border-0 rounded-3 mb-4">
+        <div class="alert alert-info border-0 rounded-3 mb-4 text-dark">
           <i class="bi bi-info-circle-fill me-2"></i>
           <strong>Informasi AI:</strong> Artikel ini dipublikasikan sebagai bagian dari dokumentasi pengembangan platform TOBAKU AI.
         </div>
 
-        <div id="konten" class="lh-lg text-secondary">
+        <div id="konten" class="lh-lg text-dark">
           <!-- Konten dinamis -->
         </div>
 
-        <!-- AREA KOMENTAR INTERAKTIF -->
         <div class="mt-5 pt-4 border-top">
-          <h4 class="fw-bold mb-4" style="color: #0f2c59;"><i class="bi bi-chat-left-text me-2"></i>Komentar</h4>
+          <h2 class="h4 fw-bold mb-4" style="color: #0f2c59;"><i class="bi bi-chat-left-text me-2"></i>Komentar</h2>
           
           <div id="commentList" class="mb-4">
             <div class="p-3 bg-light rounded-3 mb-2">
               <strong class="d-block text-dark small">Budi Santoso</strong>
-              <span class="text-muted small">Sangat bermanfaat! Semoga AI lokal semakin maju di Toba.</span>
+              <span class="text-dark small">Sangat bermanfaat! Semoga AI lokal semakin maju di Toba.</span>
             </div>
           </div>
 
@@ -92,7 +91,7 @@
             "Teknologi AI bukan untuk menggantikan pedagang lokal, melainkan memperkuat daya saing mereka di era digital."
           </blockquote>
           <p>Sistem ini mengumpulkan data harga bahan baku secara <i>real-time</i> dan memberikan rekomendasi rasional agar penjual tidak mengalami kerugian. Di samping itu, prediksi batas minimum stok barang mencegah terjadinya kehabisan pasokan saat puncak musim liburan.</p>
-          <h5 class="fw-bold text-dark mt-4">Manfaat Utama bagi Pelaku Usaha:</h5>
+          <h2 class="h5 fw-bold text-dark mt-4">Manfaat Utama bagi Pelaku Usaha:</h2>
           <ul>
             <li>Penetapan harga yang rasional dan transparan.</li>
             <li>Pengelolaan inventaris berbasis analisis kebutuhan pasar.</li>
@@ -149,7 +148,7 @@
       
       const newComment = document.createElement("div");
       newComment.className = "p-3 bg-light rounded-3 mb-2";
-      newComment.innerHTML = `<strong class="d-block text-dark small">${name}</strong><span class="text-muted small">${text}</span>`;
+      newComment.innerHTML = `<strong class="d-block text-dark small">${name}</strong><span class="text-dark small">${text}</span>`;
       
       document.getElementById("commentList").appendChild(newComment);
       document.getElementById("commentName").value = "";

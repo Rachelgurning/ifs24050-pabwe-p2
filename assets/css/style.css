@@ -7,7 +7,7 @@
   --toba-red-soft: #fef2f2;
   --toba-blue: #0f2c59;
   --text-dark: #1e1b18;
-  --text-muted: #57534e;
+  --text-muted: #44403c; /* Gelap untuk memenuhi kontras WCAG 2 AA */
   --border-color: #e7e5e4;
   --radius-pill: 999px;
   --radius-card: 16px;
@@ -72,7 +72,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-muted);
+  color: #374151; /* Kontras dinaikkan */
   font-weight: 600;
   font-size: 0.9rem;
   transition: color 0.2s;
