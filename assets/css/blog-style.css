@@ -1,0 +1,80 @@
+/* ==========================================================================
+   TOBAKU.AI - Style Khusus Blog & Blog Detail (Bootstrap 5 Customization)
+   ========================================================================== */
+
+:root {
+  --bg-toba-warm: #f8f6f0;
+  --surface-card: #ffffff;
+  --toba-blue: #0f2c59;
+  --toba-red: #991b1b;
+  --toba-red-soft: #fef2f2;
+  --text-dark: #1e1b18;
+  --text-muted: #374151;
+  --border-color: #e7e5e4;
+}
+
+body { 
+  background-color: var(--bg-toba-warm); 
+  color: var(--text-dark); 
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Navigasi Blog */
+.nav-saas { 
+  background: rgba(248, 246, 240, 0.95); 
+  backdrop-filter: blur(12px); 
+  border-bottom: 1px solid var(--border-color); 
+}
+
+.brand-navy, .text-toba-blue { color: var(--toba-blue) !important; }
+.brand-red, .text-toba-red { color: var(--toba-red) !important; }
+
+/* Kartu Blog */
+.card-saas {
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: all 0.25s ease-in-out;
+  background: var(--surface-card);
+  overflow: hidden;
+}
+
+.card-saas:hover {
+  border-color: var(--toba-red);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(153, 27, 27, 0.08);
+}
+
+.card-thumb {
+  height: 190px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.hero-cover-img { 
+  width: 100%; 
+  height: 380px; 
+  object-fit: cover; 
+}
+
+/* Badge & Tombol Custom */
+.badge-toba { 
+  background-color: var(--toba-red); 
+  color: #ffffff; 
+  font-weight: 700; 
+}
+
+.btn-filter-custom {
+  color: var(--text-muted);
+  border-color: #9ca3af;
+}
+
+.btn-filter-custom:hover, 
+.btn-filter-custom.active {
+  background-color: var(--toba-red);
+  color: #ffffff;
+  border-color: var(--toba-red);
+}
+
+.text-custom-muted { 
+  color: var(--text-muted) !important; 
+}
