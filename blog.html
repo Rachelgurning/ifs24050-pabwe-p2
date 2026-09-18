@@ -4,13 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TOBAKU AI - Blog & Informasi AI</title>
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="assets/css/blog-style.css">
 </head>
 <body>
 
-  <!-- Navigasi Header Bootstrap dengan Collapsible Menu -->
+  <!-- Navigasi Header Bootstrap -->
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg nav-saas py-3">
       <div class="container">
@@ -41,13 +46,13 @@
     <!-- Filter dan Pencarian -->
     <div class="row g-3 mb-5 align-items-center">
       <div class="col-md-6">
-        <input type="text" id="searchInput" class="form-control rounded-3" placeholder="Cari artikel..." onkeyup="filterArticles()">
+        <input type="text" id="searchInput" class="form-control rounded-3" placeholder="Cari artikel...">
       </div>
       <div class="col-md-6 d-flex gap-2 flex-wrap">
-        <button class="btn btn-sm btn-outline-secondary btn-filter-custom btn-filter active rounded-pill px-3" onclick="setCategory('All', this)">Semua</button>
-        <button class="btn btn-sm btn-outline-secondary btn-filter-custom btn-filter rounded-pill px-3" onclick="setCategory('UMKM', this)">UMKM</button>
-        <button class="btn btn-sm btn-outline-secondary btn-filter-custom btn-filter rounded-pill px-3" onclick="setCategory('Pariwisata', this)">Pariwisata</button>
-        <button class="btn btn-sm btn-outline-secondary btn-filter-custom btn-filter rounded-pill px-3" onclick="setCategory('LLM', this)">LLM & Data</button>
+        <button class="btn btn-sm btn-outline-secondary btn-filter-custom btn-filter active rounded-pill px-3" data-category="All">Semua</button>
+        <button class="btn btn-sm btn-outline-secondary btn-filter-custom btn-filter rounded-pill px-3" data-category="UMKM">UMKM</button>
+        <button class="btn btn-sm btn-outline-secondary btn-filter-custom btn-filter rounded-pill px-3" data-category="Pariwisata">Pariwisata</button>
+        <button class="btn btn-sm btn-outline-secondary btn-filter-custom btn-filter rounded-pill px-3" data-category="LLM">LLM & Data</button>
       </div>
     </div>
 
@@ -64,9 +69,9 @@
               <a href="blog-detail.html?id=omset-umkm" class="text-decoration-none text-toba-blue">Otomatisasi Harga & Stok UMKM Toba</a>
             </h2>
             <p class="text-custom-muted small flex-grow-1 mt-2">Bagaimana algoritma TOBAKU AI menentukan estimasi harga rasional bagi perajin lokal.</p>
-            <div class="pt-3 border-top small text-dark d-flex justify-content-between">
-              <span><i class="bi bi-person me-1"></i>Rachel</span>
+            <div class="pt-3 border-top small text-dark d-flex justify-content-between align-items-center flex-wrap gap-1">
               <span><i class="bi bi-calendar me-1"></i>18 Sep 2026</span>
+              <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>5 min read</span>
             </div>
             <a href="blog-detail.html?id=omset-umkm" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
@@ -83,9 +88,9 @@
               <a href="blog-detail.html?id=prediksi-wisata" class="text-decoration-none text-toba-blue">Prediksi Tren Wisatawan Danau Toba</a>
             </h2>
             <p class="text-custom-muted small flex-grow-1 mt-2">Pemetaan pola kunjungan wisatawan berbasis AI untuk mengoptimalkan sektor penginapan.</p>
-            <div class="pt-3 border-top small text-dark d-flex justify-content-between">
-              <span><i class="bi bi-person me-1"></i>Tim AI</span>
+            <div class="pt-3 border-top small text-dark d-flex justify-content-between align-items-center flex-wrap gap-1">
               <span><i class="bi bi-calendar me-1"></i>15 Sep 2026</span>
+              <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>4 min read</span>
             </div>
             <a href="blog-detail.html?id=prediksi-wisata" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
@@ -102,9 +107,9 @@
               <a href="blog-detail.html?id=llm-dokumen" class="text-decoration-none text-toba-blue">Ekstraksi Dokumen Cerdas Berbasis LLM</a>
             </h2>
             <p class="text-custom-muted small flex-grow-1 mt-2">Pemanfaatan model bahasa besar untuk mempercepat otomatisasi data dan informasi publik.</p>
-            <div class="pt-3 border-top small text-dark d-flex justify-content-between">
-              <span><i class="bi bi-person me-1"></i>Rachel</span>
+            <div class="pt-3 border-top small text-dark d-flex justify-content-between align-items-center flex-wrap gap-1">
               <span><i class="bi bi-calendar me-1"></i>10 Sep 2026</span>
+              <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>6 min read</span>
             </div>
             <a href="blog-detail.html?id=llm-dokumen" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
@@ -121,9 +126,9 @@
               <a href="blog-detail.html?id=etika-ai" class="text-decoration-none text-toba-blue">Etika & Privasi Data dalam AI Lokal</a>
             </h2>
             <p class="text-custom-muted small flex-grow-1 mt-2">Pentingnya menjaga keamanan data budaya dan identitas masyarakat lokal dalam era AI.</p>
-            <div class="pt-3 border-top small text-dark d-flex justify-content-between">
-              <span><i class="bi bi-person me-1"></i>Tim AI</span>
+            <div class="pt-3 border-top small text-dark d-flex justify-content-between align-items-center flex-wrap gap-1">
               <span><i class="bi bi-calendar me-1"></i>05 Sep 2026</span>
+              <span class="badge bg-light text-dark border"><i class="bi bi-clock me-1"></i>3 min read</span>
             </div>
             <a href="blog-detail.html?id=etika-ai" class="btn btn-sm btn-outline-danger mt-3 w-100">Baca Selengkapnya</a>
           </div>
@@ -141,30 +146,39 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    let activeCategory = 'All';
+    document.addEventListener("DOMContentLoaded", function () {
+      let activeCategory = 'All';
+      const searchInput = document.getElementById('searchInput');
+      const filterButtons = document.querySelectorAll('.btn-filter');
 
-    function setCategory(cat, btn) {
-      activeCategory = cat;
-      document.querySelectorAll('.btn-filter').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      filterArticles();
-    }
+      function filterArticles() {
+        const searchVal = searchInput.value.toLowerCase();
+        const articles = document.querySelectorAll('.article-item');
 
-    function filterArticles() {
-      const searchVal = document.getElementById('searchInput').value.toLowerCase();
-      const articles = document.querySelectorAll('.article-item');
+        articles.forEach(art => {
+          const title = art.querySelector('h2').innerText.toLowerCase();
+          const desc = art.querySelector('p').innerText.toLowerCase();
+          const category = art.getAttribute('data-category');
 
-      articles.forEach(art => {
-        const title = art.querySelector('h2').innerText.toLowerCase();
-        const desc = art.querySelector('p').innerText.toLowerCase();
-        const category = art.getAttribute('data-category');
+          const matchesSearch = title.includes(searchVal) || desc.includes(searchVal);
+          const matchesCategory = activeCategory === 'All' || category === activeCategory;
 
-        const matchesSearch = title.includes(searchVal) || desc.includes(searchVal);
-        const matchesCategory = activeCategory === 'All' || category === activeCategory;
+          art.style.display = (matchesSearch && matchesCategory) ? 'block' : 'none';
+        });
+      }
 
-        art.style.display = (matchesSearch && matchesCategory) ? 'block' : 'none';
+      // Event Listener tanpa Inline Handler
+      searchInput.addEventListener('keyup', filterArticles);
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          activeCategory = this.getAttribute('data-category');
+          filterArticles();
+        });
       });
-    }
+    });
   </script>
 </body>
 </html>
